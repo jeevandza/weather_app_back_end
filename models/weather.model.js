@@ -1,8 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/sequelize.js";
 
-
-
 /**
  * Weather model schema
  */
@@ -28,35 +26,29 @@ const WeatherModel = sequelize.define(
       type: DataTypes.DOUBLE,
       allowNull: false,
     },
-
     localtime: {
       type: DataTypes.DATE,
       allowNull: false,
     },
-
     temp_c: DataTypes.FLOAT,
     temp_f: DataTypes.FLOAT,
     feelslike_c: DataTypes.FLOAT,
     dewpoint_c: DataTypes.FLOAT,
-
     is_day: DataTypes.BOOLEAN,
     condition_text: DataTypes.STRING,
     condition_code: DataTypes.INTEGER,
     condition_icon: DataTypes.STRING,
-
     wind_mph: DataTypes.FLOAT,
     wind_kph: DataTypes.FLOAT,
     wind_degree: DataTypes.INTEGER,
     wind_dir: DataTypes.STRING,
     gust_kph: DataTypes.FLOAT,
-
     pressure_mb: DataTypes.FLOAT,
     precip_mm: DataTypes.FLOAT,
     humidity: DataTypes.INTEGER,
     cloud: DataTypes.INTEGER,
     vis_km: DataTypes.FLOAT,
     uv: DataTypes.FLOAT,
-
     data_type: {
       type: DataTypes.ENUM("current", "forecast", "hourly"),
       allowNull: false,
@@ -67,7 +59,6 @@ const WeatherModel = sequelize.define(
     tableName: "weather",
     timestamps: true,
     underscored: true,
-
     indexes: [
       { unique: true, fields: ["location_name", "data_type"] },
       { unique: true, fields: ["lat", "lon", "data_type"] },
@@ -76,5 +67,19 @@ const WeatherModel = sequelize.define(
     ],
   }
 );
+
+/**
+ * Associations are defined here as a function.
+ * This will be called from models/index.js after all models are loaded.
+ */
+WeatherModel.associate = (models) => {
+  if (models.forecastModel) {
+    WeatherModel.hasMany(models.forecastModel, {
+      foreignKey: "weather_id",
+      as: "forecasts", // define alias only once
+    });
+  }
+};
+
 
 export default WeatherModel;

@@ -1,7 +1,9 @@
 import express from "express";
 import { WeatherController } from "../controllers/index.js";
-import { weatherValidations } from "../middlewares/validations/index.js";
+import { WeatherValidations } from "../middlewares/validations/index.js";
 import { validate } from "../middlewares/validation.js";
+
+
 
 const router = express.Router();
 
@@ -9,9 +11,9 @@ const router = express.Router();
  * GET based in q params
  */
 router
-  .route("/")
+  .route("/t")
   .get(
-    validate(weatherValidations.weatherQuerySchema),
+    validate(WeatherValidations.weatherQuerySchema),
     WeatherController.getCurrentWeather
   );
 
@@ -21,7 +23,7 @@ router
 router
   .route("/list")
   .get(
-    validate(weatherValidations.fetchAllWeatherSchema),
+    validate(WeatherValidations.fetchAllWeatherSchema),
     WeatherController.getWeatherList
   );
 

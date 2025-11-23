@@ -1,21 +1,16 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/sequelize.js";
-import Models from "./index.js";
 
 const ForecastModel = sequelize.define(
   "Forecast",
   {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+
     weather_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: Models.weatherModel,
-        key: "id",
-      },
-      onDelete: "CASCADE",
     },
-    // Storing API data as JSON
+
     location: {
       type: DataTypes.JSONB,
       allowNull: false,
@@ -42,13 +37,19 @@ const ForecastModel = sequelize.define(
   }
 );
 
-Models.weatherModel.hasMany(ForecastModel, {
-  foreignKey: "weather_id",
-  as: "forecasts",
-});
-ForecastModel.belongsTo(Models.weatherModel, {
-  foreignKey: "weather_id",
-  as: "weather",
-});
+/**
+ * Define associations after all models are loaded
+ * This avoids circular dependency issues
+ */
+ForecastModel.associate = (models) => {
+  if (models.weatherModel) {
+    ForecastModel.belongsTo(models.weatherModel, {
+      foreignKey: "weather_id",
+      as: "weather",
+    });
+  }
+};
+
+
 
 export default ForecastModel;

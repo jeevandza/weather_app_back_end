@@ -1,14 +1,29 @@
-import 'dotenv/config';
-import express from "express";
-import routes from "./routes/index.js";
-import cors from "cors";
-// import sequelize from "./config/sequelize.js";
-import logger from "./utils/logger.js";
-
 
 /**
  * Load env
  */
+import 'dotenv/config';
+import routes from "./routes/index.js";
+import express from "express";
+import cors from "cors";
+import logger from "./utils/logger.js";
+// import sequelize from "./config/sequelize.js";
+// import { initializeModels } from "./models/index.js";
+// import Models from './models/index.js';
+
+
+// // important! wait until models are ready
+// await initializeModels(); 
+
+
+// // (async () => {
+// //   try {
+// //     await sequelize.authenticate();
+// //     console.log("Postgres connected successfully");
+// //   } catch (err) {
+// //     console.error("Postgres connection failed:", err);
+// //   }
+// // })();
 
 
 /**
@@ -29,13 +44,13 @@ app.use(
   })
 );
 
+
 /**
  * Combined routes
  */
 app.use("/v1", routes);
 
 app.listen(PORT, () => {
+  console.log(PORT,"port")
   logger.info(`Server listening on ${PORT}`)
-    console.log(`Server running on port ${PORT}`);
-
 });

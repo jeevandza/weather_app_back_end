@@ -4,7 +4,7 @@ import { saveWeatherToCache } from "../utils/helpers.js";
 import { asyncHandler } from "../middlewares/asyncHandler.js";
 import { WeatherService } from "../services/index.js";
 
-const FIVE_HOURS = 5 * 60 * 60 * 1000; // 5 hours
+const FIVE_HOURS = 5 * 60 * 60 * 1000; 
 
 /**
  * Get current weather

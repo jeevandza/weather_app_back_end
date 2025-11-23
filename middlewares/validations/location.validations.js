@@ -42,7 +42,6 @@ export const updateCountrySchema = Joi.object({
   }),
 });
 
-/** ------------------ Cities ------------------ */
 export const getCitiesSchema = Joi.object({
   countryId: Joi.number().optional().messages({
     "number.base": `'countryId' must be a number`,

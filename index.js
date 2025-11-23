@@ -24,7 +24,7 @@ await initializeModels();
 /**
  * Server port
  */
-const PORT = 8080;
+const PORT = 3000;
 
 /**
  * Express config

@@ -1,8 +1,16 @@
 import express from "express";
-import { getWeatherDetails } from "../controllers/weather.controller.js";
+import { weatherController } from "../controllers/index.js";
 
 const router = express.Router();
 
-router.route("/").get(getWeatherDetails);
+/**
+ * GET based in q params
+ */
+router.route("/").get(weatherController.getWeather);
+
+/**
+ * Complete list from database added to testing
+ */
+router.route("/list").get( weatherController.getWeatherList);
 
 export default router;

@@ -1,6 +1,6 @@
 import redis from "../config/redis.js";
 import { getWeatherData } from "../utils/weather_api.js";
-import { saveWeatherToDB } from "../services/weather_service.js";
+import { saveWeatherToDB } from "../services/weather.service.js";
 
 /**
  * Cache redis for weather data

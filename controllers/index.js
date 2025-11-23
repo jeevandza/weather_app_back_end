@@ -1,6 +1,9 @@
-import * as weatherController from "./weather.controller.js";
-
+import * as WeatherController from "./weather.controller.js";
+import * as LocationController from "./location.controller.js"
+import * as ForecastController from "./forecast.controller.js"
 
 export {
-    weatherController
+    WeatherController,
+    LocationController,
+    ForecastController
 }

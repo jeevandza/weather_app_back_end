@@ -3,7 +3,7 @@ import Joi from "joi";
 /**
  * Weather query validation schema
  */
-export const weatherQuerySchema = Joi.object({
+ export const weatherQuerySchema = Joi.object({
   q: Joi.string().trim().required().messages({
     "string.base": `'q' must be a string`,
     "string.empty": `'q' cannot be empty`,
@@ -18,5 +18,8 @@ export const weatherQuerySchema = Joi.object({
 /**
  * To fetch all weather data
  */
-export const fetchAllWeatherSchema = Joi.object({});
+ export const fetchAllWeatherSchema = Joi.object({});
+
+
+
 

@@ -36,4 +36,6 @@ app.use("/v1", routes);
 
 app.listen(PORT, () => {
   logger.info(`Server listening on ${PORT}`)
+    console.log(`Server running on port ${PORT}`);
+
 });

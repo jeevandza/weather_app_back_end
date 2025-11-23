@@ -1,5 +1,5 @@
 import express from "express";
-import { weatherController } from "../controllers/index.js";
+import { WeatherController } from "../controllers/index.js";
 import { weatherValidations } from "../middlewares/validations/index.js";
 import { validate } from "../middlewares/validation.js";
 
@@ -12,7 +12,7 @@ router
   .route("/")
   .get(
     validate(weatherValidations.weatherQuerySchema),
-    weatherController.getWeather
+    WeatherController.getCurrentWeather
   );
 
 /**
@@ -22,7 +22,7 @@ router
   .route("/list")
   .get(
     validate(weatherValidations.fetchAllWeatherSchema),
-    weatherController.getWeatherList
+    WeatherController.getWeatherList
   );
 
 export default router;

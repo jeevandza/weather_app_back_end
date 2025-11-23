@@ -6,6 +6,13 @@ export function validate(schema, options = {}) {
   return (req, res, next) => {
     const data = options.body ? req.body : req.query;
 
+    if (!schema || typeof schema.validate !== "function") {
+      return res.status(500).json({
+        success: false,
+        message: "Validation schema is invalid or undefined",
+      });
+    }
+
     const { error, value } = schema.validate(data, {
       abortEarly: false,
       stripUnknown: true,
@@ -20,12 +27,14 @@ export function validate(schema, options = {}) {
       });
     }
 
-    // Only overwrite safely for body; avoid query overwrite issues
-    if (options.body) req.body = value;
-
-    // Attach value for query usage
-    req.queryValue = value;
+    // Save validated data safely
+    if (options.body) req.validatedBody = value;
+    else req.validatedQuery = value;
 
     next();
   };
 }
+
+
+
+

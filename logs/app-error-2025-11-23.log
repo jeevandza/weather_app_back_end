@@ -1,0 +1,15 @@
+{"level":"error","time":"2025-11-23T08:28:23.205Z","pid":46938,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:29:37.625Z","pid":46994,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:30:48.513Z","pid":47054,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:31:05.119Z","pid":47081,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:31:05.746Z","pid":47085,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:32:16.996Z","pid":47161,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:32:19.245Z","pid":47173,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:32:38.960Z","pid":47193,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:33:27.458Z","pid":47227,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:34:10.058Z","pid":47260,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:35:58.937Z","pid":47449,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:37:22.680Z","pid":47525,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T08:37:25.806Z","pid":47560,"hostname":"Jeevans-MacBook-Air.local","msg":"DB error:"}
+{"level":"error","time":"2025-11-23T09:08:35.858Z","pid":50415,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mysoore\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T09:08:40.658Z","pid":50415,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mysoor\" and type \"current\": Request failed with status code 400"}

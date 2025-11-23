@@ -2,83 +2,107 @@ import redis from "../config/redis.js";
 import {
   saveWeatherToDB,
   getAllWeatherData,
+  getWeatherFromDB,
 } from "../services/weather_service.js";
 import { getWeatherData } from "../utils/weather_api.js";
+import { revalidateWeather, saveWeatherToCache } from "../utils/helpers.js";
+import { asyncHandler } from "../middlewares/asyncHandler.js";
 
 /**
- * Fetch weather data with Redis cache and Postgres fallback
+ * 5 hours in milliseconds
  */
-export async function getWeather(req, res) {
+const FIVE_HOURS = 5 * 60 * 60 * 1000;
+
+/**
+ * Fetch weather data
+ */
+export const getWeather = asyncHandler(async (req, res) => {
   const { q, type = "current" } = req.query;
-  if (!q)
-    return res
-      .status(400)
-      .json({ success: false, message: "q parameter required" });
+
+  if (!q) {
+    return res.status(400).json({
+      success: false,
+      message: "q parameter required",
+    });
+  }
 
   const cacheKey = `weather:${type}:${q}`;
 
   try {
-    // 1️⃣ Check Redis
+    /**
+     * First Check Redis cache
+     */
     const cached = await redis.get(cacheKey);
-    if (cached)
-      return res.status(200).json({ success: true, data: JSON.parse(cached) });
+    if (cached) {
+      const cachedData = JSON.parse(cached);
 
-    // 2️⃣ Check Postgres (FIXED lookup)
+      const lastUpdated = new Date(cachedData.updated_at);
+      const isExpired = new Date() - lastUpdated > FIVE_HOURS;
+
+      if (isExpired) {
+        logger.info(`Cached data expired for ${q}, fetching new data...`);
+        const apiData = await getWeatherData(q, type);
+        if (apiData) {
+          await saveWeatherToDB(apiData, type);
+          await saveWeatherToCache(q, apiData, type);
+          return res.status(200).json({ success: true, data: apiData });
+        }
+      }
+
+      return res.status(200).json({ success: true, data: cachedData });
+    }
+
+    /**
+     * Second Check DB if Redis missed
+     */
     const dbData = await getWeatherFromDB(q, type);
-
     if (dbData) {
-      await redis.set(
-        cacheKey,
-        JSON.stringify(dbData),
-        "EX",
-        type === "current" ? 600 : 10800
-      );
+      await saveWeatherToCache(q, dbData, type);
+
+      const lastUpdated = new Date(dbData.updated_at);
+      const isExpired = new Date() - lastUpdated > FIVE_HOURS;
+
+      if (isExpired) {
+        logger.info(`DB data expired for ${q}, fetching new data...`);
+        const apiData = await getWeatherData(q, type);
+        if (apiData) {
+          await saveWeatherToDB(apiData, type);
+          await saveWeatherToCache(q, apiData, type);
+          return res.status(200).json({ success: true, data: apiData });
+        }
+      }
 
       return res.status(200).json({ success: true, data: dbData });
     }
 
-    // 3️⃣ No DB → Fetch from external API
+    /**
+     * Third If no cache or DB data, fetch from third-party API
+     */
     const apiData = await getWeatherData(q, type);
-
     if (apiData) {
       await saveWeatherToDB(apiData, type);
-
-      await redis.set(
-        cacheKey,
-        JSON.stringify(apiData),
-        "EX",
-        type === "current" ? 600 : 10800
-      );
-
+      await saveWeatherToCache(q, apiData, type);
       return res.status(200).json({ success: true, data: apiData });
     }
 
-    return res
-      .status(404)
-      .json({ success: false, message: "Data not available yet" });
+    return res.status(404).json({
+      success: false,
+      message: "Data not available yet",
+    });
   } catch (err) {
-    console.error("Weather error:", err);
+    logger.error(`controller.getWeather->:, ${err}`);
     return res.status(500).json({
       success: false,
       message: "Failed to fetch weather data",
       error: err.message,
     });
   }
-}
+});
 
 /**
- * Get all list of weather details
+ * Fetch all weather data
  */
-
-export async function getWeatherList(req, res) {
-  try {
-    const weatherData = await getAllWeatherData();
-    return res.status(200).json({ success: true, data: weatherData });
-  } catch (err) {
-    return res.status(500).json({
-      success: false,
-      message: "Failed to fetch weather data",
-      error: err.message,
-    });
-  }
-}
+export const getWeatherList = asyncHandler(async (req, res) => {
+  const weatherData = await getAllWeatherData();
+  return res.status(200).json({ success: true, data: weatherData });
+});

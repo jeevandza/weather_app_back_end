@@ -1,16 +1,18 @@
 import { Sequelize } from "sequelize";
-import dotenv from "dotenv";
 
 
+/**
+ * configure sequelize
+ */
 const sequelize = new Sequelize(
-  "postgres",     
-  "postgres",   
-  "admin@123",     
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
-    host: "localhost",
+    host: process.env.DB_HOST,
     dialect: "postgres",
-    port:  5433,
-    logging: false,        
+    port: process.env.DB_PORT,
+    logging: false,
     pool: {
       max: 5,
       min: 0,
@@ -18,8 +20,8 @@ const sequelize = new Sequelize(
       idle: 10000,
     },
     define: {
-      timestamps: false,   
-      freezeTableName: true, 
+      timestamps: false,
+      freezeTableName: true,
     },
   }
 );

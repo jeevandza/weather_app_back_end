@@ -1,22 +1,23 @@
-import { Pool } from "pg"
+import { Pool } from "pg";
+import logger from "../utils/logger";
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "postgres",
-  password: "admin@123",
-  port: 5433,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
 /**
- * Connect postgres sql 
+ * Connect postgres sql
  */
 async function connectToDatabase() {
   try {
     const res = await pool.query("SELECT NOW()");
-    console.log("Connected! Time:", res.rows[0]);
+    logger.info("Connected to database");
   } catch (err) {
-    console.error("Database error:", err);
+    logger.error(`Database error: ${err}`);
   }
 }
 

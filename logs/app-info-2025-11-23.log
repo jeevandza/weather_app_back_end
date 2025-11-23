@@ -290,3 +290,81 @@
 {"level":"info","time":"2025-11-23T16:48:09.715Z","pid":20960,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
 {"level":"info","time":"2025-11-23T16:48:09.717Z","pid":20960,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
 {"level":"info","time":"2025-11-23T16:48:34.699Z","pid":21019,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:13:25.711Z","pid":22065,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:13:31.074Z","pid":22109,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:14:44.582Z","pid":22298,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:15:24.984Z","pid":22399,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:15:33.113Z","pid":22451,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:18:55.679Z","pid":22685,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:19:29.752Z","pid":22748,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:19:29.843Z","pid":22748,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:19:29.844Z","pid":22748,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:19:31.738Z","pid":22799,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:19:31.825Z","pid":22799,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:19:31.826Z","pid":22799,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:27:11.359Z","pid":23135,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:27:11.436Z","pid":23135,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:27:11.437Z","pid":23135,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:27:59.340Z","pid":23263,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:27:59.430Z","pid":23263,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:27:59.432Z","pid":23263,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:29:42.578Z","pid":23390,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:29:42.668Z","pid":23390,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:29:42.669Z","pid":23390,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:32:14.435Z","pid":23535,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:32:14.491Z","pid":23535,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:32:14.493Z","pid":23535,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:32:22.192Z","pid":23594,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:32:22.244Z","pid":23594,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:32:22.245Z","pid":23594,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:32:26.258Z","pid":23650,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:32:26.311Z","pid":23650,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:32:26.313Z","pid":23650,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:33:45.855Z","pid":23770,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:33:45.908Z","pid":23770,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:33:45.910Z","pid":23770,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:35:03.955Z","pid":23837,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:35:04.008Z","pid":23837,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:35:04.009Z","pid":23837,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:36:02.872Z","pid":23937,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:36:02.945Z","pid":23937,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:36:02.947Z","pid":23937,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:36:41.822Z","pid":24019,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:36:41.886Z","pid":24019,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:36:41.887Z","pid":24019,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:36:48.278Z","pid":24102,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:36:48.332Z","pid":24102,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:36:48.333Z","pid":24102,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:38:00.767Z","pid":24169,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:38:00.817Z","pid":24169,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:38:00.819Z","pid":24169,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:38:33.137Z","pid":24248,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:38:33.226Z","pid":24248,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:38:33.227Z","pid":24248,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:45:16.406Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:45:16.493Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:45:16.494Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"error","time":"2025-11-23T17:45:37.528Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"indona\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:45:37.560Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"indona\" and type \"current\": Request failed with status code 400"}
+{"level":"info","time":"2025-11-23T17:49:40.387Z","pid":24907,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:49:40.446Z","pid":24907,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:49:40.448Z","pid":24907,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:49:51.115Z","pid":24971,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:49:51.191Z","pid":24971,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:49:51.192Z","pid":24971,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"info","time":"2025-11-23T17:49:53.657Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:49:53.716Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:49:53.717Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}
+{"level":"error","time":"2025-11-23T17:52:56.004Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"andrapradesh\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:52:56.013Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"andrapradesh\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:52:56.291Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"andrapradesh\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:53:03.096Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"hariyana\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:53:03.118Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"hariyana\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:57:20.849Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Londan\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:57:20.862Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Londan\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:58:06.824Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mudbidire\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:58:06.835Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mudbidire\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:58:07.099Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mudbidire\" and type \"forecast\": Request failed with status code 400"}
+{"level":"info","time":"2025-11-23T17:59:39.791Z","pid":25453,"hostname":"Jeevans-MacBook-Air.local","msg":"Database connected!"}
+{"level":"info","time":"2025-11-23T17:59:39.871Z","pid":25453,"hostname":"Jeevans-MacBook-Air.local","msg":"All tables synced successfully!"}
+{"level":"info","time":"2025-11-23T17:59:39.872Z","pid":25453,"hostname":"Jeevans-MacBook-Air.local","msg":"Server listening on 8080"}

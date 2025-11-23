@@ -1,16 +1,15 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/sequelize.js";
 
+
 const ForecastModel = sequelize.define(
   "Forecast",
   {
     id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
-
     weather_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-
     location: {
       type: DataTypes.JSONB,
       allowNull: false,
@@ -28,6 +27,10 @@ const ForecastModel = sequelize.define(
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
     },
+    forecast_data: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
   },
   {
     tableName: "forecast",
@@ -36,6 +39,8 @@ const ForecastModel = sequelize.define(
     indexes: [{ fields: ["weather_id"] }, { fields: ["fetched_at"] }],
   }
 );
+
+
 
 /**
  * Define associations after all models are loaded

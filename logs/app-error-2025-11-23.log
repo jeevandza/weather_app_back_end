@@ -1,0 +1,12 @@
+{"level":"error","time":"2025-11-23T17:45:37.528Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"indona\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:45:37.560Z","pid":24616,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"indona\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:52:56.004Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"andrapradesh\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:52:56.013Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"andrapradesh\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:52:56.291Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"andrapradesh\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:53:03.096Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"hariyana\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:53:03.118Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"hariyana\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:57:20.849Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Londan\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:57:20.862Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Londan\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:58:06.824Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mudbidire\" and type \"current\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:58:06.835Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mudbidire\" and type \"forecast\": Request failed with status code 400"}
+{"level":"error","time":"2025-11-23T17:58:07.099Z","pid":25024,"hostname":"Jeevans-MacBook-Air.local","msg":"Weather API error for query \"Mudbidire\" and type \"forecast\": Request failed with status code 400"}

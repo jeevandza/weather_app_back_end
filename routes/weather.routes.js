@@ -11,7 +11,7 @@ const router = express.Router();
  * GET based in q params
  */
 router
-  .route("/t")
+  .route("/")
   .get(
     validate(WeatherValidations.weatherQuerySchema),
     WeatherController.getCurrentWeather

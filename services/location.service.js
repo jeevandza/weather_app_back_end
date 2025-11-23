@@ -91,7 +91,6 @@ export const seedCountriesAndCities = async () => {
       }
     }
 
-    console.log("Countries and cities seeded successfully.");
     return { success: true, message: "Countries and cities seeded successfully" };
   } catch (err) {
     console.error("Seeding countries and cities failed:", err.message);

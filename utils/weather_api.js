@@ -5,7 +5,6 @@ import logger from "../utils/logger.js";
  * Fetch weather details based on the type
  */
 export async function getWeatherData(q, type = "current") {
-  console.log("i called", type)
   try {
     const endpoint =
       type === "current"

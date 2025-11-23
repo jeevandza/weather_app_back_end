@@ -4,7 +4,6 @@ import { LocationValidations } from "../middlewares/validations/index.js";
 import { validate } from "../middlewares/validation.js";
 
 
-console.log('Location router loaded');
 
 
 const router = express.Router();

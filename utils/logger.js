@@ -91,7 +91,7 @@ const logger = pino(
       ? [
           { level: "info", stream: infoStream },
           { level: "error", stream: errorStream },
-          { level: "info", stream: process.stdout }, // also log to console in dev
+          { level: "info", stream: process.stdout }, 
         ]
       : [
           { level: "info", stream: infoStream },

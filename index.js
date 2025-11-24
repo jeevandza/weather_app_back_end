@@ -2,7 +2,7 @@
  * Load env
  */
 import "dotenv/config";
-import routes from "./routegit coindex.js";
+import routes from "./routes/index.js";
 import express from "express";
 import cors from "cors";
 import logger from "./utils/logger.js";
@@ -24,7 +24,7 @@ await initializeModels();
 /**
  * Server port
  */
-const PORT = 6000;
+const PORT = 3000;
 
 /**
  * Express config

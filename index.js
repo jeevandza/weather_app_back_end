@@ -2,12 +2,12 @@
  * Load env
  */
 import "dotenv/config";
-import routes from "./routes/index.js";
+import routes from "./routegit coindex.js";
 import express from "express";
 import cors from "cors";
 import logger from "./utils/logger.js";
 // import sequelize from "./config/sequelize.js";
-import { initializeModels } from "./models/index.js";
+// import { initializeModels } from "./models/index.js";
 
 // important! wait until models are ready
 await initializeModels();
@@ -24,7 +24,7 @@ await initializeModels();
 /**
  * Server port
  */
-const PORT = 3000;
+const PORT = 6000;
 
 /**
  * Express config

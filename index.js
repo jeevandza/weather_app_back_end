@@ -7,7 +7,7 @@ import express from "express";
 import cors from "cors";
 import logger from "./utils/logger.js";
 // import sequelize from "./config/sequelize.js";
-// import { initializeModels } from "./models/index.js";
+import { initializeModels } from "./models/index.js";
 
 // important! wait until models are ready
 await initializeModels();

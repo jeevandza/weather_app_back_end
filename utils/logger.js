@@ -2,25 +2,36 @@ import pino from "pino";
 import fs from "fs";
 import path from "path";
 
-
+/**
+ * Determine environment
+ */
+const isDev = process.env.NODE_ENV !== "production";
 
 /**
  * Log directory
+ * - Local dev: ./logs
+ * - Production: /tmp/logs (writable)
  */
-const logDir = path.join(process.cwd(), "logs");
-if (!fs.existsSync(logDir)) fs.mkdirSync(logDir);
+const logDir = isDev
+  ? path.join(process.cwd(), "logs")
+  : path.join("/tmp", "logs");
 
+// Create log directory if it doesn't exist
+if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
+
+/**
+ * Generate log file path
+ */
 function getLogFile(level) {
   const date = new Date().toISOString().split("T")[0];
   return path.join(logDir, `app-${level}-${date}.log`);
 }
 
-
 /**
- * Rotate old logs (same as your function) 
+ * Rotate old logs
  */
 function rotateLogs(level) {
-  const logFile = path.join(logDir, `app.log`);
+  const logFile = path.join(logDir, "app.log");
   const rotatedFile = getLogFile(level);
 
   if (fs.existsSync(rotatedFile)) return;
@@ -32,13 +43,12 @@ function rotateLogs(level) {
   fs.writeFileSync(logFile, "");
 }
 
-
-
 /**
- * 
- *Delete old logs
+ * Delete old logs (default: 30 days)
  */
 function deleteOldLogs(maxDays = 30) {
+  if (!fs.existsSync(logDir)) return;
+
   const files = fs.readdirSync(logDir);
   const cutoff = Date.now() - maxDays * 24 * 60 * 60 * 1000;
 
@@ -51,23 +61,17 @@ function deleteOldLogs(maxDays = 30) {
   });
 }
 
-
-
 /**
  * Rotate and cleanup logs on startup
  */
 ["info", "error"].forEach((level) => rotateLogs(level));
 deleteOldLogs();
 
-
-
 /**
- * Create separate destinations for info and error
+ * Create separate destinations for info and error logs
  */
 const infoStream = pino.destination(getLogFile("info"));
 const errorStream = pino.destination(getLogFile("error"));
-
-
 
 /**
  * Logger instance
@@ -82,10 +86,18 @@ const logger = pino(
       },
     },
   },
-  pino.multistream([
-    { level: "info", stream: infoStream },
-    { level: "error", stream: errorStream },
-  ])
+  pino.multistream(
+    isDev
+      ? [
+          { level: "info", stream: infoStream },
+          { level: "error", stream: errorStream },
+          { level: "info", stream: process.stdout }, // also log to console in dev
+        ]
+      : [
+          { level: "info", stream: infoStream },
+          { level: "error", stream: errorStream },
+        ]
+  )
 );
 
 export default logger;

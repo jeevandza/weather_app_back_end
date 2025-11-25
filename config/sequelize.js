@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
 
-
 /**
  * configure sequelize
  */
@@ -13,6 +12,12 @@ const sequelize = new Sequelize(
     dialect: "postgres",
     port: process.env.DB_PORT,
     logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
     pool: {
       max: 5,
       min: 0,

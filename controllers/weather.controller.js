@@ -4,7 +4,7 @@ import { saveWeatherToCache } from "../utils/helpers.js";
 import { asyncHandler } from "../middlewares/asyncHandler.js";
 import { WeatherService } from "../services/index.js";
 
-const FIVE_HOURS = 5 * 60 * 60 * 1000; 
+const FIVE_HOURS = 5 * 60 * 60 * 1000;
 
 /**
  * Get current weather
@@ -30,7 +30,8 @@ export const getCurrentWeather = asyncHandler(async (req, res) => {
       const lastUpdated = new Date(cachedData.updated_at);
       const isExpired = new Date() - lastUpdated > FIVE_HOURS;
 
-      if (!isExpired) return res.status(200).json({ success: true, data: cachedData });
+      if (!isExpired)
+        return res.status(200).json({ success: true, data: cachedData });
       /**
        * else, fetch new data and update DB/cache in background
        */
@@ -50,7 +51,8 @@ export const getCurrentWeather = asyncHandler(async (req, res) => {
     if (needUpdate) {
       const apiData = await getWeatherData(q, "current");
       if (apiData) {
-        await WeatherService.saveWeatherToDB(apiData, "current");
+        const store = await WeatherService.saveWeatherToDB(apiData, "current");
+        return res.status(200).json({ success: true, data: store });
       }
     }
 

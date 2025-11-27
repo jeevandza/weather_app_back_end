@@ -34,7 +34,8 @@ export async function saveWeatherToDB(data, type = "current") {
     updated_at: new Date(),
   };
 
-  return await Models.weatherModel.upsert(values);
+  const updatedDAta =  await Models.weatherModel.upsert(values);
+  return updatedDAta[0]
 }
 
 
